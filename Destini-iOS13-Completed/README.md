@@ -15,9 +15,17 @@ In this app, you will be creating a “choose your own adventure” game similar
 <img src="https://user-images.githubusercontent.com/73591684/132847320-acc6ccae-9c46-49ab-9c88-96cd9787a692.png" height = 700 >
 </p>
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73591684/132847330-784ce6af-91f9-42ec-94ad-5c0ffb9dc95a.png" height = 700 >
+</p>
 
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-10 at 13 55 44](https://user-images.githubusercontent.com/73591684/132847320-acc6ccae-9c46-49ab-9c88-96cd9787a692.png)
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-10 at 13 55 57](https://user-images.githubusercontent.com/73591684/132847330-784ce6af-91f9-42ec-94ad-5c0ffb9dc95a.png)
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-10 at 13 55 51](https://user-images.githubusercontent.com/73591684/132847339-d6517089-a5d1-4326-8c0b-5211523215b5.png)
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-10 at 13 55 48](https://user-images.githubusercontent.com/73591684/132847350-1aed4fd9-0309-4e3d-a0d0-17a8e7acbc5c.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73591684/132847339-d6517089-a5d1-4326-8c0b-5211523215b5.png" height = 700 >
+</p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73591684/132847350-1aed4fd9-0309-4e3d-a0d0-17a8e7acbc5c.png" height = 700 >
+</p>
+
+
 
