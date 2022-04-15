@@ -24,6 +24,7 @@
 		DD376DB92804828A00D5ED9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD376DBB2804828A00D5ED9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD38AD502805B820001FC899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../AppIcons 2/Assets.xcassets"; sourceTree = "<group>"; };
+		DD3932872809CDC1004C0DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +57,40 @@
 		DD376DAC2804828900D5ED9A /* Cat Breeds App */ = {
 			isa = PBXGroup;
 			children = (
-				DD376DAD2804828900D5ED9A /* AppDelegate.swift */,
 				DD376DAF2804828900D5ED9A /* SceneDelegate.swift */,
-				DD376DB12804828900D5ED9A /* ViewController.swift */,
-				DD376DB32804828900D5ED9A /* Main.storyboard */,
+				DD376DAD2804828900D5ED9A /* AppDelegate.swift */,
+				DD3932852809CCAB004C0DBE /* Model */,
+				DD3932842809CC9C004C0DBE /* Controller */,
 				DD38AD502805B820001FC899 /* Assets.xcassets */,
+				DD3932862809CCC1004C0DBE /* View */,
+				DD3932872809CDC1004C0DBE /* Assets.xcassets */,
 				DD376DB82804828A00D5ED9A /* LaunchScreen.storyboard */,
 				DD376DBB2804828A00D5ED9A /* Info.plist */,
 			);
 			path = "Cat Breeds App";
+			sourceTree = "<group>";
+		};
+		DD3932842809CC9C004C0DBE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD376DB12804828900D5ED9A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD3932852809CCAB004C0DBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD3932862809CCC1004C0DBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD376DB32804828900D5ED9A /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
