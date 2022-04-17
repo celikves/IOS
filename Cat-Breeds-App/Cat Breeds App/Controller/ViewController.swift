@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func didTapButton(){
+        let viewcontrol = UIViewController()
+        viewcontrol.view.backgroundColor = .orange
+        
+        navigationController?.pushViewController(viewcontrol, animated: true)
+    }
 }
 
