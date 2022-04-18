@@ -13,6 +13,10 @@
 		DD376DB52804828900D5ED9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD376DB32804828900D5ED9A /* Main.storyboard */; };
 		DD376DBA2804828A00D5ED9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD376DB82804828A00D5ED9A /* LaunchScreen.storyboard */; };
 		DDDF977D280CE40B00D96D71 /* cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DDDF977C280CE40B00D96D71 /* cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg */; };
+		DDE0248C280DB82C001B1A38 /* ServerAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE0248B280DB82C001B1A38 /* ServerAccess.swift */; };
+		DDE0248E280DBB4C001B1A38 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE0248D280DBB4B001B1A38 /* BreedModel.swift */; };
+		DDE02493280DC870001B1A38 /* BreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE02491280DC870001B1A38 /* BreedTableViewCell.swift */; };
+		DDE02494280DC870001B1A38 /* BreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE02492280DC870001B1A38 /* BreedTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		DD376DBB2804828A00D5ED9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD3932872809CDC1004C0DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDDF977C280CE40B00D96D71 /* cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg"; path = "../../../cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg"; sourceTree = "<group>"; };
+		DDE0248B280DB82C001B1A38 /* ServerAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAccess.swift; sourceTree = "<group>"; };
+		DDE0248D280DBB4B001B1A38 /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
+		DDE02491280DC870001B1A38 /* BreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewCell.swift; sourceTree = "<group>"; };
+		DDE02492280DC870001B1A38 /* BreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,8 @@
 		DD3932852809CCAB004C0DBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DDE0248B280DB82C001B1A38 /* ServerAccess.swift */,
+				DDE0248D280DBB4B001B1A38 /* BreedModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				DD376DB32804828900D5ED9A /* Main.storyboard */,
+				DDE02491280DC870001B1A38 /* BreedTableViewCell.swift */,
+				DDE02492280DC870001B1A38 /* BreedTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE02494280DC870001B1A38 /* BreedTableViewCell.xib in Resources */,
 				DDDF977D280CE40B00D96D71 /* cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg in Resources */,
 				DD376DBA2804828A00D5ED9A /* LaunchScreen.storyboard in Resources */,
 				DD376DB52804828900D5ED9A /* Main.storyboard in Resources */,
@@ -164,9 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE02493280DC870001B1A38 /* BreedTableViewCell.swift in Sources */,
 				DD376DB22804828900D5ED9A /* ViewController.swift in Sources */,
 				DD376DAE2804828900D5ED9A /* AppDelegate.swift in Sources */,
+				DDE0248C280DB82C001B1A38 /* ServerAccess.swift in Sources */,
 				DD376DB02804828900D5ED9A /* SceneDelegate.swift in Sources */,
+				DDE0248E280DBB4C001B1A38 /* BreedModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
