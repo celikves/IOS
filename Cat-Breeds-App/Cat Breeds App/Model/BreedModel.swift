@@ -7,6 +7,31 @@
 
 import Foundation
 
+struct BreedElement: Codable {
+    var image: Image?
+    var name: String
+
+    enum CodingKeys: String, CodingKey {
+        case image = "image"
+        case name = "name"
+    }
+}
+
+// MARK: - Image
+struct Image: Codable {
+    var height: Int?
+    var id: String?
+    var url: String?
+    var width: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case height = "height"
+        case id = "id"
+        case url = "url"
+        case width = "width"
+    }
+}
+/*
 struct BreedModel: Codable {
     let altNames: String
     let experimental, hairless, hypoallergenic: Int
@@ -63,3 +88,4 @@ class JSONNull: Codable, Hashable {
     }
 }
 
+*/

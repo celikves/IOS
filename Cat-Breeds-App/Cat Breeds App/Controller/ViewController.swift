@@ -7,26 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BreedTableViewCell", for: indexPath)
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
+class ViewController: UIViewController {
     
     
-
-        
+    let serverAccess: ServerAccess = ServerAccess()
+    var breeds = [BreedElement]()
+    
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,9 +23,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = UINib(nibName: "BreedTableViewCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "BreedTableViewCell")
-       
+        
+        _ = serverAccess.get(completionHandler: { response in
+            print(response ?? "nil")
+            print(response?[0].image?.url ?? "")
+            self.breeds = response!
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                
+            }
+        })
+        
+        
+        
     }
-
+    
     @IBAction func didTapButton(){
         let viewcontrol = UIViewController()
         viewcontrol.view.backgroundColor = .orange
@@ -46,3 +46,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 }
 
+extension ViewController :  UITableViewDataSource, UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return breeds.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BreedTableViewCell") as? BreedTableViewCell
+        cell?.setData(name: breeds[indexPath.row].name
+                      , imageUrl: breeds[indexPath.row].image?.url ?? "", starStatus: false)
+        let image = downloadImage(with: breeds[indexPath.row].image?.url ?? "") { image in
+            cell?.breedImage.image = image
+        }
+        return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        //vc.name = breeds[indexPath.row].name
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+}

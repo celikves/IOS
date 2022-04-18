@@ -9,11 +9,29 @@ import UIKit
 
 class BreedTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var breedImage: UIImageView!
+    @IBOutlet weak var starButton: UIButton!
+    @IBOutlet weak var breedsName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        breedImage.layer.cornerRadius = breedImage.frame.size.height / 2
+        breedImage.clipsToBounds = true
+        
+    }
+    
+    func setData(name : String , imageUrl : String , starStatus : Bool){
+        breedsName.text = name
+        if starStatus{
+            starButton.setImage(UIImage(named: "star.fill"), for: .normal)
+        }else{
+            starButton.setImage(UIImage(named: "star"), for: .normal)
+        }
     }
 
+    @IBAction func didPressAddToFavoites(_ sender: UIButton) {
+        
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
