@@ -55,7 +55,7 @@ extension ViewController :  UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BreedTableViewCell") as? BreedTableViewCell
-        cell?.setData(name: breeds[indexPath.row].name
+        cell?.setData(name: breeds[indexPath.row].name,life_span: breeds[indexPath.row].life_span
                       , imageUrl: breeds[indexPath.row].image?.url ?? "", starStatus: false)
         let image = downloadImage(with: breeds[indexPath.row].image?.url ?? "") { image in
             cell?.breedImage.image = image
@@ -70,7 +70,17 @@ extension ViewController :  UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
-        //vc.name = breeds[indexPath.row].name
+        
+        vc!.name = breeds[indexPath.row].name
+        
+        vc!.lifeSpan = breeds[indexPath.row].life_span
+        
+        /*let image = downloadImage(with: breeds[indexPath.row].image?.url ?? "") { image in
+            vc?.breedDetailImage.image = image
+        }
+         */
+        //vc?.breedDetailImage = image
+        
         self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

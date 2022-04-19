@@ -99,6 +99,14 @@
                             <constraint firstItem="zKP-Hy-sHT" firstAttribute="leading" secondItem="kF2-Az-IqM" secondAttribute="leading" constant="20" id="UBz-ks-n5d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="breedDetail" destination="80d-wi-jIn" id="FHQ-oF-3LY"/>
+                        <outlet property="breedDetailImage" destination="zKP-Hy-sHT" id="GYk-br-nTZ"/>
+                        <outlet property="breedDogFriendly" destination="7va-9J-xxQ" id="7aW-7v-56k"/>
+                        <outlet property="breedLifeSpan" destination="Ktx-21-a2w" id="BNj-Zs-bUV"/>
+                        <outlet property="breedOrigin" destination="Eyb-TT-vkz" id="szM-nK-KRD"/>
+                        <outlet property="wikipedaURl" destination="NLm-Dn-qoo" id="CaO-CZ-mOg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZd-oN-I83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

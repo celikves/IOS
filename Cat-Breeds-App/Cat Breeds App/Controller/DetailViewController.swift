@@ -9,11 +9,24 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var breedDetail: UILabel!
+    @IBOutlet weak var breedOrigin: UILabel!
+    @IBOutlet weak var breedDogFriendly: UILabel!
+    @IBOutlet weak var breedLifeSpan: UILabel!
+    @IBOutlet weak var wikipedaURl: UILabel!
+    @IBOutlet weak var breedDetailImage: UIImageView!
+    
     var name : String = ""
+    var origin : String = ""
+    var wikipediaURL : String = ""
+    var dogFriendly : String = ""
+    var lifeSpan : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //breedName.text = name
+        breedDetail.text=name
+        breedLifeSpan.text="Life Span : \(lifeSpan)"
         // Do any additional setup after loading the view.
     }
     

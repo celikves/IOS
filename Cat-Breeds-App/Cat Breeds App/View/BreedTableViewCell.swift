@@ -20,7 +20,7 @@ class BreedTableViewCell: UITableViewCell {
         
     }
     
-    func setData(name : String , imageUrl : String , starStatus : Bool){
+    func setData(name : String ,life_span:String, imageUrl : String , starStatus : Bool){
         breedsName.text = name
         if starStatus{
             starButton.setImage(UIImage(named: "star.fill"), for: .normal)
