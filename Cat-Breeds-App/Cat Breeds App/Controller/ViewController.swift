@@ -34,8 +34,6 @@ class ViewController: UIViewController {
             }
         })
         
-        
-        
     }
     
     @IBAction func didTapButton(){
@@ -55,8 +53,8 @@ extension ViewController :  UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BreedTableViewCell") as? BreedTableViewCell
-        cell?.setData(name: breeds[indexPath.row].name,life_span: breeds[indexPath.row].life_span
-                      , imageUrl: breeds[indexPath.row].image?.url ?? "", starStatus: false)
+        cell?.setData(name: breeds[indexPath.row].name
+                      , imageUrl: breeds[indexPath.row].image?.url ?? "",origin: breeds[indexPath.row].origin,life_span:breeds[indexPath.row].life_span, starStatus: false)
         let image = downloadImage(with: breeds[indexPath.row].image?.url ?? "") { image in
             cell?.breedImage.image = image
         }
@@ -72,14 +70,10 @@ extension ViewController :  UITableViewDataSource, UITableViewDelegate{
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
         
         vc!.name = breeds[indexPath.row].name
+        vc!.origin=breeds[indexPath.row].origin
+        vc!.lifeSpan=breeds[indexPath.row].life_span
         
-        vc!.lifeSpan = breeds[indexPath.row].life_span
         
-        /*let image = downloadImage(with: breeds[indexPath.row].image?.url ?? "") { image in
-            vc?.breedDetailImage.image = image
-        }
-         */
-        //vc?.breedDetailImage = image
         
         self.navigationController?.pushViewController(vc!, animated: true)
     }

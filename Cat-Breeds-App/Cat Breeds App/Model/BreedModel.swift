@@ -10,11 +10,14 @@ import Foundation
 struct BreedElement: Codable {
     var image: Image?
     var name: String
+    var origin : String
     var life_span : String
 
     enum CodingKeys: String, CodingKey {
+        
         case image = "image"
         case name = "name"
+        case origin = "origin"
         case life_span = "life_span"
     }
 }
