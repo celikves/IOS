@@ -54,7 +54,7 @@ extension ViewController :  UITableViewDataSource, UITableViewDelegate{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BreedTableViewCell") as? BreedTableViewCell
         cell?.setData(name: breeds[indexPath.row].name
-                      , imageUrl: breeds[indexPath.row].image?.url ?? "",origin: breeds[indexPath.row].origin,life_span:breeds[indexPath.row].life_span, starStatus: false)
+                      , imageUrl: breeds[indexPath.row].image?.url ?? "",  origin: breeds[indexPath.row].origin,life_span:breeds[indexPath.row].life_span,description:breeds[indexPath.row].description,detailsImageUrl:breeds[indexPath.row].detailsPageImage?.url ?? "" , starStatus: false)
         let image = downloadImage(with: breeds[indexPath.row].image?.url ?? "") { image in
             cell?.breedImage.image = image
         }
@@ -69,9 +69,15 @@ extension ViewController :  UITableViewDataSource, UITableViewDelegate{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
         
-        vc!.name = breeds[indexPath.row].name
+        //vc!.name = breeds[indexPath.row].name
+        //let image = downloadImage(with: breeds[indexPath.row].detailsPageImage?.url ?? "") { image in
+         //   vc!.breedDetailImage.image = image
+       // }
+        //vc?.breedDetailImage=breeds[indexPath]
         vc!.origin=breeds[indexPath.row].origin
         vc!.lifeSpan=breeds[indexPath.row].life_span
+        vc?.detail=breeds[indexPath.row].description
+        //vc!.wikipediaURL=breeds[indexPath.row].wikipedia_url
         
         
         

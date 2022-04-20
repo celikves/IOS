@@ -12,6 +12,9 @@ struct BreedElement: Codable {
     var name: String
     var origin : String
     var life_span : String
+    var description : String
+    var detailsPageImage : Image?
+    //var wikipedia_url : String
 
     enum CodingKeys: String, CodingKey {
         
@@ -19,6 +22,9 @@ struct BreedElement: Codable {
         case name = "name"
         case origin = "origin"
         case life_span = "life_span"
+        case description = "description"
+        case detailsPageImage = "detailsImage"
+        //case wikipedia_url = "wikipedia_url"
     }
 }
 

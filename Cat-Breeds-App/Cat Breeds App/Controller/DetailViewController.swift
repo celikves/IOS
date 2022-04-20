@@ -13,11 +13,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var breedOrigin: UILabel!
     @IBOutlet weak var breedDogFriendly: UILabel!
     @IBOutlet weak var breedLifeSpan: UILabel!
-   
     @IBOutlet weak var breedWikipediaURL: UILabel!
     @IBOutlet weak var breedDetailImage: UIImageView!
     
-    var name : String = ""
+    var detail : String = ""
     var origin : String = ""
     var wikipediaURL : String = ""
     var dogFriendly : String = ""
@@ -25,9 +24,10 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        breedDetail.text=name
         breedOrigin.text="Origin : \(origin)"
         breedLifeSpan.text="Life Span : \(lifeSpan)"
+        breedDetail.text="\(detail)"
+        //breedWikipediaURL.text="Wikipedia URL : \(wikipediaURL)"
         
     }
  
