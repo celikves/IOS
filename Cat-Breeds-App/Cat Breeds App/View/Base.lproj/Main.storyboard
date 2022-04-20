@@ -27,11 +27,11 @@
             </objects>
             <point key="canvasLocation" x="-1138" y="-810"/>
         </scene>
-        <!--Item-->
+        <!--Home Page-->
         <scene sceneID="iRi-3j-K2C">
             <objects>
                 <navigationController id="t09-yR-vbX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jJC-ll-TQ5"/>
+                    <tabBarItem key="tabBarItem" title="Home Page" id="jJC-ll-TQ5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vLI-rr-Mbj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -70,13 +70,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvR-cQ-z8e">
-                                <rect key="frame" x="45" y="520" width="322" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktx-21-a2w">
                                 <rect key="frame" x="45" y="596" width="322" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,6 +84,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCf-M8-hX2">
+                                <rect key="frame" x="324" y="44" width="70" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="ezL-9H-CTu"/>
+                                    <constraint firstAttribute="width" constant="70" id="r0Y-oL-jFd"/>
+                                </constraints>
+                                <color key="tintColor" red="0.76540001410000003" green="0.49948071500000002" blue="0.05529033757" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baT-nD-rjS">
+                                <rect key="frame" x="45" y="531" width="322" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="wikipediaAction:" destination="cmt-AB-oMC" eventType="touchUpInside" id="uxc-20-hfD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kF2-Az-IqM"/>
                         <color key="backgroundColor" red="0.58577578640000005" green="0.8400555837" blue="0.47232330979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -98,6 +110,8 @@
                             <constraint firstItem="kF2-Az-IqM" firstAttribute="trailing" secondItem="zKP-Hy-sHT" secondAttribute="trailing" constant="20" id="1E4-O6-8Eq"/>
                             <constraint firstItem="zKP-Hy-sHT" firstAttribute="top" secondItem="kF2-Az-IqM" secondAttribute="top" constant="50" id="QFG-P8-LSQ"/>
                             <constraint firstItem="zKP-Hy-sHT" firstAttribute="leading" secondItem="kF2-Az-IqM" secondAttribute="leading" constant="20" id="UBz-ks-n5d"/>
+                            <constraint firstItem="sCf-M8-hX2" firstAttribute="top" secondItem="kF2-Az-IqM" secondAttribute="top" id="eta-bA-ACc"/>
+                            <constraint firstItem="kF2-Az-IqM" firstAttribute="trailing" secondItem="sCf-M8-hX2" secondAttribute="trailing" constant="20" id="uOt-DB-XBi"/>
                         </constraints>
                     </view>
                     <connections>
@@ -106,7 +120,7 @@
                         <outlet property="breedDogFriendly" destination="7va-9J-xxQ" id="7aW-7v-56k"/>
                         <outlet property="breedLifeSpan" destination="Ktx-21-a2w" id="BNj-Zs-bUV"/>
                         <outlet property="breedOrigin" destination="Eyb-TT-vkz" id="szM-nK-KRD"/>
-                        <outlet property="breedWikipediaURL" destination="lvR-cQ-z8e" id="eFg-wh-Nuv"/>
+                        <outlet property="breedWikipediaButton" destination="baT-nD-rjS" id="EJK-s2-PBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZd-oN-I83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -203,6 +217,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home Page" id="HgD-Vn-GLl"/>
                     <connections>
+                        <outlet property="searchFiels" destination="Yig-Rt-2vs" id="yMY-O3-1rT"/>
                         <outlet property="tableView" destination="FQ0-MX-I4C" id="w1P-kO-i8q"/>
                     </connections>
                 </viewController>
@@ -285,11 +300,11 @@
             </objects>
             <point key="canvasLocation" x="778.26086956521749" y="732.58928571428567"/>
         </scene>
-        <!--Item-->
+        <!--My Favorites-->
         <scene sceneID="Lty-7u-dhc">
             <objects>
                 <navigationController id="w2S-Bu-pC1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gu3-V5-djL"/>
+                    <tabBarItem key="tabBarItem" title="My Favorites" id="gu3-V5-djL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D8E-XU-eY6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -323,6 +338,7 @@
     <resources>
         <image name="location.north.circle.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
