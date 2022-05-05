@@ -26,21 +26,62 @@ class ViewController: UIViewController {
         let cell = UINib(nibName: "BreedTableViewCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "BreedTableViewCell")
         
-        _ = serverAccess.get(completionHandler: { response in
-            print(response ?? "nil")
-            print(response?[0].image?.url ?? "")
-            self.breeds = response!
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                
-            }
-        })
+        getData()
         
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField){
-        print(textField.text)
+    func getData() {
+    
+    _ = serverAccess.get(completionHandler: { response in
+        print(response ?? "nil")
+        print(response?[0].image?.url ?? "")
+        self.breeds = response!
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            
+        }
+    })
     }
+    
+    fileprivate func searchFunction(_ text: String) {
+        self.breeds.removeAll()
+
+        if text.count >= 1{
+           // self.view.startLoader()
+           // self.searchStatus = true
+            _ = serverAccess.getSearch(searchText: text, completionHandler: { response in
+                if (response == nil){
+                    /*
+                   // let alert = UIAlertController(title: "Not Found", message: "Not found a cat with this name", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .cancel)
+                    alert.addAction(action)
+//                    alert.addAction(action1)
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true)
+                        //self.view.stopLoader()
+
+                    }*/
+                    return
+                }
+                self.breeds = response ?? []
+                DispatchQueue.main.async {
+                    //self.view.stopLoader()
+
+                    self.tableView.reloadData()
+                }
+            })
+        }else{
+            getData()
+        }
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField){
+        guard let text = textField.text else{
+            return
+        }
+        searchFunction(text)
+    }
+    
     @IBAction func didTapButton(){
         let viewcontrol = UIViewController()
         viewcontrol.view.backgroundColor = .orange

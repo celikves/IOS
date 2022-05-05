@@ -12,6 +12,7 @@
 		DD376DB22804828900D5ED9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD376DB12804828900D5ED9A /* ViewController.swift */; };
 		DD376DB52804828900D5ED9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD376DB32804828900D5ED9A /* Main.storyboard */; };
 		DD376DBA2804828A00D5ED9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD376DB82804828A00D5ED9A /* LaunchScreen.storyboard */; };
+		DD62C23D2812DD9F006B5BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3932872809CDC1004C0DBE /* Assets.xcassets */; };
 		DDDF977D280CE40B00D96D71 /* cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DDDF977C280CE40B00D96D71 /* cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg */; };
 		DDE0248C280DB82C001B1A38 /* ServerAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE0248B280DB82C001B1A38 /* ServerAccess.swift */; };
 		DDE0248E280DBB4C001B1A38 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE0248D280DBB4B001B1A38 /* BreedModel.swift */; };
@@ -33,7 +34,7 @@
 		DD376DB42804828900D5ED9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD376DB92804828A00D5ED9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD376DBB2804828A00D5ED9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD3932872809CDC1004C0DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD3932872809CDC1004C0DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Cat Breeds App/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		DDDF977C280CE40B00D96D71 /* cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg"; path = "../../../cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg"; sourceTree = "<group>"; };
 		DDE0248B280DB82C001B1A38 /* ServerAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAccess.swift; sourceTree = "<group>"; };
 		DDE0248D280DBB4B001B1A38 /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 				DDDF977D280CE40B00D96D71 /* cat-cartoon-character-flat-cute-card-green-background-kids-cat-cartoon-flat-cute-card-111157893.jpeg in Resources */,
 				DD376DBA2804828A00D5ED9A /* LaunchScreen.storyboard in Resources */,
 				DD376DB52804828900D5ED9A /* Main.storyboard in Resources */,
+				DD62C23D2812DD9F006B5BCA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
