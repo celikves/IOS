@@ -29,6 +29,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addTapped))
+
+        
         let image = downloadImage(with:breedImageUrl ?? "") { image in
             self.breedDetailImage.image = image
        }
@@ -37,9 +40,10 @@ class DetailViewController: UIViewController {
         breedDetail.text="\(detail)"
         breedWikipediaButton.setTitle("Wikipedia URL : \(wikipediaURL)", for: .normal)
       
-        
-        
-        
+    }
+    
+    @objc func addTapped(sender: UIBarButtonItem) {
+        // Function body goes here
     }
  
     @IBAction func wikipediaAction(_ sender: UIButton) {

@@ -62,5 +62,4 @@ class ServerAccess{
         task.resume()
         return task
     }
-    
 }

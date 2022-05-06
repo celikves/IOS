@@ -9,56 +9,62 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="KGk-i7-Jjw" customClass="BreedTableViewCell" customModule="Cat_Breeds_App" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="ks5-KB-cTv" customClass="BreedTableViewCell" customModule="Cat_Breeds_App" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ks5-KB-cTv" id="tkL-ef-EFn">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8ds-8w-qPl">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TE2-Uu-c9p">
                         <rect key="frame" x="20" y="10.5" width="82" height="81"/>
                         <color key="tintColor" red="0.76540001410000003" green="0.4918475276" blue="0.18235930110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="82" id="kcz-H4-PZA"/>
+                            <constraint firstAttribute="width" constant="82" id="LSU-gO-bGP"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Breed Cat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUb-lX-A6G">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Breed Cat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VE8-8u-35x">
                         <rect key="frame" x="122" y="41" width="120" height="19"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyO-wc-TkV">
-                        <rect key="frame" x="264" y="37" width="47" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71k-zQ-gFn">
+                        <rect key="frame" x="250" y="26" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Txt-DU-cNv"/>
+                            <constraint firstAttribute="width" constant="50" id="plU-V7-Ol5"/>
+                        </constraints>
                         <color key="tintColor" red="0.76540001410000003" green="0.4918475276" blue="0.18235930110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
                         <connections>
-                            <action selector="didPressAddToFavoites:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MpK-BF-Ns0"/>
+                            <action selector="didPressAddToFavoites:" destination="ks5-KB-cTv" eventType="touchUpInside" id="jjf-8k-631"/>
                         </connections>
                     </button>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="8ds-8w-qPl" secondAttribute="bottom" constant="10" id="6QG-3Z-O6G"/>
-                    <constraint firstItem="8ds-8w-qPl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="8Nw-w5-aRX"/>
-                    <constraint firstItem="iUb-lX-A6G" firstAttribute="centerY" secondItem="8ds-8w-qPl" secondAttribute="centerY" id="PeS-2W-f5i"/>
-                    <constraint firstItem="8ds-8w-qPl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="kW2-nf-AhA"/>
-                    <constraint firstItem="iUb-lX-A6G" firstAttribute="leading" secondItem="8ds-8w-qPl" secondAttribute="trailing" constant="20" id="nBJ-jl-xma"/>
+                    <constraint firstAttribute="bottom" secondItem="TE2-Uu-c9p" secondAttribute="bottom" constant="10" id="547-0b-ywu"/>
+                    <constraint firstAttribute="trailing" secondItem="71k-zQ-gFn" secondAttribute="trailing" constant="20" id="F9Y-fd-RRM"/>
+                    <constraint firstItem="TE2-Uu-c9p" firstAttribute="top" secondItem="tkL-ef-EFn" secondAttribute="top" constant="10" id="IKH-Sq-yJV"/>
+                    <constraint firstItem="VE8-8u-35x" firstAttribute="leading" secondItem="TE2-Uu-c9p" secondAttribute="trailing" constant="20" id="ItC-eQ-1Ak"/>
+                    <constraint firstItem="VE8-8u-35x" firstAttribute="centerY" secondItem="TE2-Uu-c9p" secondAttribute="centerY" id="RfF-IX-SUs"/>
+                    <constraint firstItem="71k-zQ-gFn" firstAttribute="centerY" secondItem="VE8-8u-35x" secondAttribute="centerY" id="bal-xN-ijR"/>
+                    <constraint firstItem="TE2-Uu-c9p" firstAttribute="leading" secondItem="tkL-ef-EFn" secondAttribute="leading" constant="20" id="dsA-Ap-M0R"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <viewLayoutGuide key="safeArea" id="PO9-pY-qHf"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="breedImage" destination="8ds-8w-qPl" id="kpe-KE-wD1"/>
-                <outlet property="breedsName" destination="iUb-lX-A6G" id="DL9-Ub-m5Z"/>
-                <outlet property="starButton" destination="wyO-wc-TkV" id="j6m-Fg-mS2"/>
+                <outlet property="breedImage" destination="TE2-Uu-c9p" id="jup-1o-NCp"/>
+                <outlet property="breedsName" destination="VE8-8u-35x" id="z7A-ef-JQh"/>
+                <outlet property="starButton" destination="71k-zQ-gFn" id="jDn-ey-nxi"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="109.15178571428571"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>
