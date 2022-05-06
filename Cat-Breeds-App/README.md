@@ -9,7 +9,7 @@ HomePage
 </p>
 
 
-<p>Favorites  Page</p>
+<p style="text-align:center">Favorites  Page</p>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/73591684/167118648-cf645df6-9cb6-40f0-9a33-920ae7e0371f.png" height = 700 >
 </p>
