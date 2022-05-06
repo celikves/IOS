@@ -8,25 +8,25 @@
 import Foundation
 
 struct BreedElement: Codable {
+    var id: String?
     var image: Image?
-    var name: String
-    var origin : String
-    var life_span : String
-    var description : String
-    var detailsPageImage : Image?
+    var name: String?
+    var origin : String?
+    var life_span : String?
+    var description : String?
     var wikipedia_url : String?
 
     enum CodingKeys: String, CodingKey {
-        
+        case id = "id"
         case image = "image"
         case name = "name"
         case origin = "origin"
         case life_span = "life_span"
         case description = "description"
-        case detailsPageImage = "detailsImage"
         case wikipedia_url = "wikipedia_url"
     }
 }
+
 
 // MARK: - Image
 struct Image: Codable {

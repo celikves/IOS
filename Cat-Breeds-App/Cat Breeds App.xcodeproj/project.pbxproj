@@ -20,6 +20,10 @@
 		DDE02494280DC870001B1A38 /* BreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE02492280DC870001B1A38 /* BreedTableViewCell.xib */; };
 		DDE02496280E0C63001B1A38 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE02495280E0C63001B1A38 /* UIViewControllerExtensions.swift */; };
 		DDE02498280E105D001B1A38 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE02497280E105D001B1A38 /* DetailViewController.swift */; };
+		DDE26F8728250F73004C85FD /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE26F8628250F73004C85FD /* FavoritesViewController.swift */; };
+		DDE26F8B282519D4004C85FD /* UIViewController-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE26F8A282519D4004C85FD /* UIViewController-Extensions.swift */; };
+		DDE26F8D28251C2A004C85FD /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE26F8C28251C2A004C85FD /* SearchTableViewCell.swift */; };
+		DDE26F8F28251F57004C85FD /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDE26F8E28251F57004C85FD /* SearchTableViewCell.xib */; };
 		F3194D1BAAB99919AE0761B8 /* Pods_Cat_Breeds_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7578BDE863CA5BB0561A521C /* Pods_Cat_Breeds_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,10 @@
 		DDE02492280DC870001B1A38 /* BreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedTableViewCell.xib; sourceTree = "<group>"; };
 		DDE02495280E0C63001B1A38 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		DDE02497280E105D001B1A38 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DDE26F8628250F73004C85FD /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		DDE26F8A282519D4004C85FD /* UIViewController-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extensions.swift"; sourceTree = "<group>"; };
+		DDE26F8C28251C2A004C85FD /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		DDE26F8E28251F57004C85FD /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		DD376DAC2804828900D5ED9A /* Cat Breeds App */ = {
 			isa = PBXGroup;
 			children = (
+				DDE26F89282519B1004C85FD /* Extensions */,
 				DD376DAF2804828900D5ED9A /* SceneDelegate.swift */,
 				DD376DAD2804828900D5ED9A /* AppDelegate.swift */,
 				DD3932852809CCAB004C0DBE /* Model */,
@@ -113,6 +122,7 @@
 			children = (
 				DD376DB12804828900D5ED9A /* ViewController.swift */,
 				DDE02497280E105D001B1A38 /* DetailViewController.swift */,
+				DDE26F8628250F73004C85FD /* FavoritesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -129,11 +139,29 @@
 		DD3932862809CCC1004C0DBE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DDE26F8828250F7D004C85FD /* CustomViews */,
 				DD376DB32804828900D5ED9A /* Main.storyboard */,
-				DDE02491280DC870001B1A38 /* BreedTableViewCell.swift */,
-				DDE02492280DC870001B1A38 /* BreedTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DDE26F8828250F7D004C85FD /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				DDE02491280DC870001B1A38 /* BreedTableViewCell.swift */,
+				DDE02492280DC870001B1A38 /* BreedTableViewCell.xib */,
+				DDE26F8C28251C2A004C85FD /* SearchTableViewCell.swift */,
+				DDE26F8E28251F57004C85FD /* SearchTableViewCell.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		DDE26F89282519B1004C85FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDE26F8A282519D4004C85FD /* UIViewController-Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +229,7 @@
 				DD376DBA2804828A00D5ED9A /* LaunchScreen.storyboard in Resources */,
 				DD376DB52804828900D5ED9A /* Main.storyboard in Resources */,
 				DD62C23D2812DD9F006B5BCA /* Assets.xcassets in Resources */,
+				DDE26F8F28251F57004C85FD /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +283,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE02493280DC870001B1A38 /* BreedTableViewCell.swift in Sources */,
+				DDE26F8728250F73004C85FD /* FavoritesViewController.swift in Sources */,
 				DD376DB22804828900D5ED9A /* ViewController.swift in Sources */,
 				DD376DAE2804828900D5ED9A /* AppDelegate.swift in Sources */,
+				DDE26F8D28251C2A004C85FD /* SearchTableViewCell.swift in Sources */,
+				DDE26F8B282519D4004C85FD /* UIViewController-Extensions.swift in Sources */,
 				DDE0248C280DB82C001B1A38 /* ServerAccess.swift in Sources */,
 				DD376DB02804828900D5ED9A /* SceneDelegate.swift in Sources */,
 				DDE0248E280DBB4C001B1A38 /* BreedModel.swift in Sources */,

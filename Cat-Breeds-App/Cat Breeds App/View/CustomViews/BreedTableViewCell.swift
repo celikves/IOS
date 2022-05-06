@@ -12,6 +12,9 @@ class BreedTableViewCell: UITableViewCell {
     @IBOutlet weak var breedImage: UIImageView!
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var breedsName: UILabel!
+    
+    var actionHandler: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -228,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="-1007.2463768115942" y="697.76785714285711"/>
         </scene>
-        <!--OtherViewController-->
+        <!--FavoritesViewController-->
         <scene sceneID="Mzr-Tq-lG7">
             <objects>
-                <viewController title="OtherViewController" id="Jfl-wI-Jmv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesViewController" title="FavoritesViewController" id="Jfl-wI-Jmv" customClass="FavoritesViewController" customModule="Cat_Breeds_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xP0-Y0-BbY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,9 +263,21 @@
                                     <constraint firstItem="Md3-xs-UXX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8rP-yy-ePD" secondAttribute="trailing" constant="8" symbolic="YES" id="iEe-Uz-CF0"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pFr-fZ-iWn">
-                                <rect key="frame" x="20" y="217" width="374" height="647"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFr-fZ-iWn">
+                                <rect key="frame" x="20" y="148" width="374" height="728"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="P1H-ce-vMR">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="728"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="P1H-ce-vMR" firstAttribute="top" secondItem="pFr-fZ-iWn" secondAttribute="top" id="Q5O-dV-zZp"/>
+                                    <constraint firstAttribute="trailing" secondItem="P1H-ce-vMR" secondAttribute="trailing" id="W1d-8y-pcu"/>
+                                    <constraint firstItem="P1H-ce-vMR" firstAttribute="leading" secondItem="pFr-fZ-iWn" secondAttribute="leading" id="dZx-YK-oKU"/>
+                                    <constraint firstAttribute="bottom" secondItem="P1H-ce-vMR" secondAttribute="bottom" id="dv2-nf-vSR"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H3G-VG-Efc"/>
@@ -282,6 +294,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="Id0-Gy-S6G"/>
+                    <connections>
+                        <outlet property="tableView" destination="P1H-ce-vMR" id="07a-DS-HEc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ss-tr-x57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
