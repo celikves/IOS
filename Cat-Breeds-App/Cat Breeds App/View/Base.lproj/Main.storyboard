@@ -30,7 +30,7 @@
         <scene sceneID="iRi-3j-K2C">
             <objects>
                 <navigationController id="t09-yR-vbX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home Page" id="jJC-ll-TQ5"/>
+                    <tabBarItem key="tabBarItem" title="Home Page" image="house.fill" catalog="system" id="jJC-ll-TQ5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vLI-rr-Mbj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -306,7 +306,7 @@
         <scene sceneID="Lty-7u-dhc">
             <objects>
                 <navigationController id="w2S-Bu-pC1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Favorites" id="gu3-V5-djL"/>
+                    <tabBarItem key="tabBarItem" title="My Favorites" image="star.fill" catalog="system" id="gu3-V5-djL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D8E-XU-eY6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -321,6 +321,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="location.north.circle.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
